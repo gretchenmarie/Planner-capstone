@@ -1,21 +1,24 @@
-import React, {Component} from 'react'
-import TaskList from './TaskList'
-import TaskForm from './TaskForm'
-import TaskCard from './TaskCard'
+// import React, {Component} from 'react'
+// import TaskList from './TaskList'
+// import TaskForm from './TaskForm'
+// import EditTask from './EditTask'
+// import TaskCard from './TaskCard'
+// import "./Tasks.css"
 
 
 
-export default class Tasks extends Component {
+// export default class Tasks extends Component {
 
-   render() {
-       return (
-       <div>
-
-           <TaskForm {...this.props}/>
-           <TaskList {...this.props}/>
-           <TaskCard {...this.props}/>
-       </div>
-       )
-   }
-}
+//    render() {
+//        return (
+//        <div>
+//             Hello
+//             <TaskCard {...this.props}/>
+//          <TaskForm {...this.props}/>
+//            <TaskList {...this.props}/>
+//            <EditTask {...this.props}/>
+//        </div>
+//        )
+//    }
+// }
 

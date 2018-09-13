@@ -35,5 +35,14 @@ edit: {
             body: JSON.stringify(editTask)
         }).then(e => e.json())
     }
-}
+},
+delete: {
+    value: (id) => {
+        return fetch(`${remoteURL}/tasks/${id}`, {
+        method: "DELETE"
+    })
+   .then(e => e.json()) 
+
+    }
+},
 })

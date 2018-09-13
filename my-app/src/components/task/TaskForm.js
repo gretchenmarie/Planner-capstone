@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input } from 'reactstrap';
+import "./Tasks.css"
 
 class TaskForm extends React.Component {
   constructor(props) {
@@ -8,6 +9,7 @@ class TaskForm extends React.Component {
       modal: false,
       name: "",
       date: "",
+      details:"",
       userId: ""
     };
 
@@ -27,7 +29,7 @@ class TaskForm extends React.Component {
         this.setState(stateToChange)
     }
 
-    user = () => JSON.parse(sessionStorage.getItem(""))
+    user = () => JSON.parse(sessionStorage.getItem("credentials"))
 
     /*
         Local method for validation, creating task object, and
@@ -38,6 +40,7 @@ class TaskForm extends React.Component {
         const newTask = {
             name: this.state.name,
             date: this.state.date,
+            details: this.state.details,
             status: false,
             userId: this.user().id
         }
@@ -49,13 +52,17 @@ class TaskForm extends React.Component {
     return (
       <div className="taskform">
         <Button color="indigo" onClick={this.toggle}>New Task</Button>
-        <Modal className="taskform"  isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+        <Modal  isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>New Task</ModalHeader>
           <ModalBody>
               <Form>
                   <FormGroup>
                     <Label for="taskName">Task Name</Label>
-                    <Input type="text" name="task" id="name" placeholder="Do something" onChange={this.handleFieldChange}/>
+                    <Input type="text" name="task" id="name" placeholder="Task Name" onChange={this.handleFieldChange}/>
+                  </FormGroup>
+                  <FormGroup>
+                    <Label for="taskDetails">Details</Label>
+                    <Input type="text" name="details" id="details" placeholder="Details" onChange={this.handleFieldChange}/>
                   </FormGroup>
                   <FormGroup>
                     <Label for="taskDate">Task Date</Label>

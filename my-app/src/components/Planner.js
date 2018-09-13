@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 //import "./Planner.css"
 
 class Planner extends Component {
-  render() {
+  render () {
     return (
       <React.Fragment>
         <Nav />
