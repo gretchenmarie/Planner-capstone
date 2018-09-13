@@ -29,28 +29,20 @@
   ],
   "tasks": [
     {
-      "userId": 1,
-      "name": "school project",
-      "details": "supplies needed",
-      "date": "2018-08-30",
-      "taskStatus": true,
-      "id": 1
-    },
-    {
-      "name": "test",
-      "date": "2018-09-01",
-      "details": "test",
-      "status": false,
-      "userId": 2,
-      "id": 2
-    },
-    {
       "name": "test2",
       "date": "2018-09-07",
-      "details": "test2",
+      "detail": "This is for the details of the task",
       "status": false,
       "userId": 2,
       "id": 3
+    },
+    {
+      "name": "test2",
+      "date": "2018-09-01",
+      "detail": "Deatils of another task",
+      "status": false,
+      "userId": 2,
+      "id": 4
     }
   ]
 }

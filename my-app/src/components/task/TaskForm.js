@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input } from 'reactstrap';
+import "./Tasks.css"
 
 class TaskForm extends React.Component {
   constructor(props) {

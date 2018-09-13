@@ -2,8 +2,9 @@ import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from "react"
 //import Nav from './navbar/Nav'
 import Week from './week/Week'
-import Tasks from './task/Tasks'
-
+import TaskList from './task/TaskList'
+import TaskDetail from "./task/TaskDetail"
+import EditTask from "./task/EditTask"
 import Month from './month/Month'
 
 import TaskManager from '../modules/TaskManager'
@@ -14,6 +15,7 @@ import Login from './login/Login'
 
 export default class ApplicationViews extends Component {
     isAuthenticated = () => sessionStorage.getItem("credentials") !== null
+    user = () => JSON.parse(sessionStorage.getItem("credentials"))
     state = {
 
         month: [],
@@ -39,8 +41,8 @@ export default class ApplicationViews extends Component {
         .then(tasks => this.setState({
             tasks: tasks
         }))
-    deleteTask = id => TaskManager.delete("tasks", id)
-        .then(() => TaskManager.getAllOfId("tasks", this.user().id))
+    deleteTask = id => TaskManager.delete( id)
+        .then(() => TaskManager.getAll())
         .then(tasks => this.setState({
             tasks: tasks
         }))
@@ -78,9 +80,9 @@ export default class ApplicationViews extends Component {
                             return <Redirect to="/login" />
                         }
                     }} />
-                    <Route path="/tasks" render={(props) => {
+                    <Route exact path="/tasks" render={(props) => {
                        if (this.isAuthenticated()) {
-                        return <Tasks {...props}
+                        return <TaskList {...props}
                             addTask={this.addTask}
                             editTask={this.editTask}
                             deleteTask={this.deleteTask}
@@ -88,6 +90,18 @@ export default class ApplicationViews extends Component {
                         }else {
                             return <Redirect to="/login" />
                         }
+                    }} />
+                   <Route exact path="/tasks/:taskId(\d+)" render={(props) => {
+                        return <TaskDetail {...props}
+                            tasks={this.state.tasks}
+                            deleteTask={this.deleteTask}
+                            editTask={this.editTask} />
+                    }} />
+                   <Route path="/tasks/edit/:taskId(\d+)" render={(props) => {
+                        return <EditTask {...props}
+                            tasks={this.state.tasks}
+                            deleteTask={this.deleteTask}
+                            editTask={this.editTask} />
                     }} />
 
 
