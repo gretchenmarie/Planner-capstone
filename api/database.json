@@ -1,49 +1,56 @@
 {
-    "users": [
-      {
-        "email": "Somethingelse@something.net",
-        "username": "Someone Else",
-        "id": 1
-      },
-      {
-        "email": "nick",
-        "username": "nick",
-        "id": 2
-      },
-      {
-        "email": "g@g",
-        "username": "gretchen",
-        "id": 3
-      },
-      {
-        "email": "a@a",
-        "username": "gretch",
-        "password": "aaaa",
-        "id": 4
-      }
-    ],
-    "month": [
-      {
-        "monthId": 3,
-        "date": 1534535109142,
-        "id": 1
-      }
-    ],
-    "week": [
-      {
-        "name": "Monday",
-        "date": "2018-09-08",
-        "id": 1
-      }
-    ],
-    "tasks": [
-      {
-        "userId": 1,
-        "name": "school project",
-        "details": "supplies needed",
-        "date": "2018-08-30",
-        "taskStatus": true,
-        "id": 1
-      }
-    ]
-  }
+  "users": [
+    {
+      "email": "test",
+      "username": "test",
+      "password": "test",
+      "id": 1
+    },
+    {
+      "email": "gretchennutter@gmail.com",
+      "username": "gnutter01",
+      "password": "nnnn",
+      "id": 2
+    }
+  ],
+  "month": [
+    {
+      "monthId": 3,
+      "date": 1534535109142,
+      "id": 1
+    }
+  ],
+  "week": [
+    {
+      "name": "Monday",
+      "date": "2018-09-08",
+      "id": 1
+    }
+  ],
+  "tasks": [
+    {
+      "userId": 1,
+      "name": "school project",
+      "details": "supplies needed",
+      "date": "2018-08-30",
+      "taskStatus": true,
+      "id": 1
+    },
+    {
+      "name": "test",
+      "date": "2018-09-01",
+      "details": "test",
+      "status": false,
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "name": "test2",
+      "date": "2018-09-07",
+      "details": "test2",
+      "status": false,
+      "userId": 2,
+      "id": 3
+    }
+  ]
+}

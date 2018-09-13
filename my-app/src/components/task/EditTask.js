@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import "./Tasks.css"
 
-export default class TasksCard extends Component {
+export default class EditTask extends Component {
 
     state = {
         edit: false,
@@ -33,6 +33,7 @@ export default class TasksCard extends Component {
         const task = {
             name: this.state.task.name,
             date: this.state.task.date,
+            details: this.state.task.details,
             userId: this.state.task.userId,
             id: this.state.task.id,
             status: this.state.task.status
@@ -48,13 +49,19 @@ export default class TasksCard extends Component {
         return (
             <React.Fragment >
                 {(this.state.edit) ?
-                    <div className="taskcard">
+                    <div className="edittask">
                         <label>Task Name</label>
                         <input type="text" required="true"
                         className="form-control"
                         onChange={(evt) => { this.handleFieldChange("name", evt) }}
                         id="name"
                         value={this.state.task.name} />
+                        <label>Task Details</label>
+                        <input type="text" required="true"
+                        className="form-control"
+                        onChange={(evt) => { this.handleFieldChange("details", evt) }}
+                        id="details"
+                        value={this.state.task.details} />
                         <label>Task Date</label>
                         <input type="date" required="true"
                         className="form-control"
@@ -64,8 +71,9 @@ export default class TasksCard extends Component {
                         <button onClick={this.constructEditedTask}>Save Edited Task</button>
                     </div>
                 :
-                    <div className="taskcard">
+                    <div className="edittask">
                         <h5>{this.props.tasks.name}</h5>
+                        <h5>{this.props.tasks.details}</h5>
                         <h5>{this.props.tasks.date}</h5>
                         <label>Task Complete</label>
                         <input type="checkbox" name="completed" value="complete"/>

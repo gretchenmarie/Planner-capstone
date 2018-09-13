@@ -141,10 +141,10 @@ export default class Login extends Component {
                        id="password"
                        placeholder="Password"
                        required="" /><br />
-                <label htmlFor="rememberMe">
+                {/* <label htmlFor="rememberMe">
                     Remember Me
-                </label>
-                <input type="checkbox" name="RememberMe" value="Remember" onClick={this.changeRememberMe}/>
+                </label> */}
+                {/* /<input type="checkbox" name="RememberMe" value="Remember" onClick={this.changeRememberMe}/> */}
                 <button type="submit" onClick={(e) => this.registerUser(e)}>
                     Register
                 </button>
