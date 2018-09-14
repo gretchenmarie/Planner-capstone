@@ -26,8 +26,9 @@ post: {
     }
 },
 edit: {
-    value: function (editTask) {
-        return fetch(`${remoteURL}/tasks`, {
+    value: function (editTask,id) {
+        console.log(editTask,"API")
+        return fetch(`${remoteURL}/tasks/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -41,7 +42,7 @@ delete: {
         return fetch(`${remoteURL}/tasks/${id}`, {
         method: "DELETE"
     })
-   .then(e => e.json()) 
+   .then(e => e.json())
 
     }
 },

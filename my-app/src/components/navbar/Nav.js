@@ -1,32 +1,53 @@
-import React, { Component } from "react"
-//import { Link } from "react-router-dom"
-//import "bootstrap/dist/css/bootstrap.min.css"
+import React from 'react';
+import { Nav, NavItem, NavLink } from 'reactstrap';
 
-import { Link } from "react-router-dom"
+export default class Example extends React.Component {
+  constructor(props) {
+    super(props);
 
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      dropdownOpen: false
+    };
+  }
 
+  toggle() {
+    this.setState({
+      dropdownOpen: !this.state.dropdownOpen
+    });
+  }
 
-class Nav extends Component {
-    render() {
-        return (
-            <nav className="navbar navbar-light fixed-top light-blue flex-md-nowrap p-0 shadow">
-                <ul className="nav nav-pills">
-
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/">month</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/week">Week Of</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/tasks">Task</Link>
-                    </li>
-
-
-                </ul>
-            </nav>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <Nav tabs>
+          <NavItem>
+            <NavLink href="/login" active>Login</NavLink>
+          </NavItem>
+          {/* <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+            <DropdownToggle nav caret>
+              Dropdown
+            </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem header>Header</DropdownItem>
+              <DropdownItem disabled>Action</DropdownItem>
+              <DropdownItem>Another Action</DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem>Another Action</DropdownItem>
+            </DropdownMenu>
+          </Dropdown> */}
+          <NavItem>
+            <NavLink href="/month">Month View</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/week">Week View</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink  href="/tasks">Task List</NavLink>
+          </NavItem>
+        </Nav>
+      </div>
+    );
+  }
 }
 
-export default Nav

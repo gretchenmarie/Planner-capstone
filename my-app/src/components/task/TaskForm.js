@@ -9,7 +9,8 @@ class TaskForm extends React.Component {
       modal: false,
       name: "",
       date: "",
-      details:"",
+      time:"",
+      detail:"",
       userId: ""
     };
 
@@ -40,7 +41,8 @@ class TaskForm extends React.Component {
         const newTask = {
             name: this.state.name,
             date: this.state.date,
-            details: this.state.details,
+            time: this.state.time,
+            detail: this.state.detail,
             status: false,
             userId: this.user().id
         }
@@ -61,12 +63,16 @@ class TaskForm extends React.Component {
                     <Input type="text" name="task" id="name" placeholder="Task Name" onChange={this.handleFieldChange}/>
                   </FormGroup>
                   <FormGroup>
-                    <Label for="taskDetails">Details</Label>
-                    <Input type="text" name="details" id="details" placeholder="Details" onChange={this.handleFieldChange}/>
+                    <Label for="taskDetail">Details</Label>
+                    <Input type="text" name="detail" id="detail" placeholder="Detail" onChange={this.handleFieldChange}/>
                   </FormGroup>
                   <FormGroup>
                     <Label for="taskDate">Task Date</Label>
                     <Input type="date" name="task" id="date" onChange={this.handleFieldChange}/>
+                  </FormGroup>
+                  <FormGroup>
+                    <Label for="taskTime">Task Time</Label>
+                    <Input type="time" name="task" id="time" onChange={this.handleFieldChange}/>
                   </FormGroup>
               </Form>
           </ModalBody>

@@ -1,4 +1,11 @@
-
+.card-body{
+    height: 10cm;
+    width: 15cm;
+}
+.card{
+    height: 10cm;
+    width: 15cm;
+}
 .taskcard{
     margin: 12em;
 }

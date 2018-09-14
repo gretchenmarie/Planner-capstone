@@ -46,8 +46,8 @@ export default class ApplicationViews extends Component {
         .then(tasks => this.setState({
             tasks: tasks
         }))
-    editTask = (id, editedTask) => TaskManager.patch("tasks", id, editedTask)
-        .then(() => TaskManager.getAllOfId("tasks", this.user().id))
+    editTask = (editedTask, id) => TaskManager.edit(editedTask,id)
+       .then(() => TaskManager.getAll("tasks", this.user().id))
         .then(tasks => this.setState({
             tasks: tasks
         }))
@@ -97,7 +97,7 @@ export default class ApplicationViews extends Component {
                             deleteTask={this.deleteTask}
                             editTask={this.editTask} />
                     }} />
-                   <Route path="/tasks/edit/:taskId(\d+)" render={(props) => {
+                   <Route exact path="/tasks/edit/:taskId(\d+)" render={(props) => {
                         return <EditTask {...props}
                             tasks={this.state.tasks}
                             deleteTask={this.deleteTask}

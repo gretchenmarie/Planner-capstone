@@ -29,20 +29,30 @@
   ],
   "tasks": [
     {
-      "name": "test2",
-      "date": "2018-09-07",
-      "detail": "This is for the details of the task",
-      "status": false,
-      "userId": 2,
-      "id": 3
-    },
-    {
-      "name": "test2",
+      "name": "route",
       "date": "2018-09-01",
       "detail": "Deatils of another task",
       "status": false,
       "userId": 2,
       "id": 4
+    },
+    {
+      "name": "school",
+      "date": "12:59",
+      "time": "",
+      "detail": "capstone",
+      "status": false,
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "name": "another test",
+      "date": "2018-09-15",
+      "time": "13:00",
+      "detail": " details",
+      "status": false,
+      "userId": 2,
+      "id": 6
     }
   ]
 }

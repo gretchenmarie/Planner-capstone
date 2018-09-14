@@ -3,6 +3,7 @@ import TaskCard from './TaskCard'
 import "./Tasks.css"
 import TaskForm from "./TaskForm"
 
+
 //import EditTask from "./EditTask"
 export default class TaskList extends Component {
 
@@ -15,10 +16,11 @@ export default class TaskList extends Component {
             <section>
                     {
                         this.props.tasks.map(task =>
-                            <TaskCard key={task.id} task={task} {...this.props} />
+                            <TaskCard  key={task.id} task={task}  editTask={this.props.editTask} deleteTask={this.props.deleteTask} {...this.props} />
                         )
                     }
                 </section>
+
 
             </React.Fragment>
         )
