@@ -31,9 +31,9 @@ export default class EditTask extends Component {
            detail: this.state.detail,
            date: this.state.date
         }
-
+console.log(task,"edit page");
         // Create the article and redirect user to article list
-        this.props.task(this.props.match.params.taskId, task).then(() => this.props.history.push("/"))
+        this.props.editTask(task, this.props.match.params.taskId).then(() => this.props.history.push("/tasks"))
 
 
     };
@@ -49,7 +49,7 @@ export default class EditTask extends Component {
 
                     <div className="form-group">
                         <label htmlFor="taskName">Task Name</label>
-                        <input type="text" required="true"
+                        <input type="text" required
                                className="form-control"
                                onChange={this.handleFieldChange}
                                id="name"
@@ -58,18 +58,18 @@ export default class EditTask extends Component {
                                />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="details">Details</label>
-                        <input type="text" required="true"
+                        <label htmlFor="detail">Details</label>
+                        <input type="text" required
                                className="form-control"
                                onChange={this.handleFieldChange}
                                id="detail"
-                               defaultValue={this.state.details}
+                               defaultValue={this.state.detail}
                                placeholder="details" />
                     </div>
 
                     <div className="form-group">
                         <label htmlFor="date">Date</label>
-                        <input type="date" required="true"
+                        <input type="date" required
                                className="form-control"
                                onChange={this.handleFieldChange}
                                id="date"
@@ -78,7 +78,18 @@ export default class EditTask extends Component {
                     </div>
 
 
-                    <button type="submit"  className="btn" id="submit-edit" onClick={this.editTask}>Submit</button>
+                    <div className="form-group">
+                        <label htmlFor="time">Time</label>
+                        <input type="time" required
+                               className="form-control"
+                               onChange={this.handleFieldChange}
+                               id="time"
+                               defaultValue={this.state.time}
+                               placeholder="URL" />
+                    </div>
+
+
+                    <button type="submit"  className="btn" id="submit-edit" onClick={this.EditTask}>Submit</button>
                     </form>
                     </React.Fragment>
         )

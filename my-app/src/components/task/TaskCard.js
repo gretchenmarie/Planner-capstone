@@ -17,8 +17,13 @@ export default class TaskCard extends Component {
                                  <h5 className="card-title">
 
                                  {this.props.task.name}
+                                 <br />
                                  {this.props.task.detail}
+                                 <br />
                                  {this.props.task.date}
+                                 <br />
+                                 {this.props.task.time}
+                                 <br />
                                  <Link className="nav-link" to={`/tasks/${this.props.task.id}`}>Details</Link>
                                  <button onClick={() => this.props.deleteTask(this.props.task.id)}
                                     className="button">Delete</button>
