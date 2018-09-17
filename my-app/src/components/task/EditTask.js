@@ -8,7 +8,9 @@ export default class EditTask extends Component {
     state = {
         name: "",
         detail: "",
-        date: ""
+        date: "",
+        day:"",
+        time:""
     }
 
     // Update state whenever an input field is edited
@@ -29,7 +31,9 @@ export default class EditTask extends Component {
        const task = {
            name: this.state.name,
            detail: this.state.detail,
-           date: this.state.date
+           date: this.state.date,
+           day: this.state.day,
+           time: this.state.time
         }
 console.log(task,"edit page");
         // Create the article and redirect user to article list
@@ -66,6 +70,17 @@ console.log(task,"edit page");
                                defaultValue={this.state.detail}
                                placeholder="details" />
                     </div>
+                    < br/>
+                    <div className="form-group">
+                        <label htmlFor="day">Day</label>
+                        <input type="day" required
+                               className="form-control"
+                               onChange={this.handleFieldChange}
+                               id="day"
+                               defaultValue={this.state.day}
+                               placeholder="URL" />
+                    </div>
+                           <br />
 
                     <div className="form-group">
                         <label htmlFor="date">Date</label>
@@ -76,7 +91,9 @@ console.log(task,"edit page");
                                defaultValue={this.state.date}
                                placeholder="URL" />
                     </div>
+                             <br />
 
+                  
 
                     <div className="form-group">
                         <label htmlFor="time">Time</label>

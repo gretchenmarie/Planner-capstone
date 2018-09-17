@@ -9,6 +9,7 @@ class TaskForm extends React.Component {
       modal: false,
       name: "",
       date: "",
+      day: "",
       time:"",
       detail:"",
       userId: ""
@@ -38,15 +39,17 @@ class TaskForm extends React.Component {
      */
     constructNewTask = evt => {
         evt.preventDefault()
+
         const newTask = {
             name: this.state.name,
             date: this.state.date,
+            //day: this.state.day,
             time: this.state.time,
             detail: this.state.detail,
             status: false,
-            userId: this.user().id
+            userId: this.user().id,
+        
         }
-
         this.props.addTask(newTask).then(() => this.toggle())
     }
 
@@ -68,7 +71,11 @@ class TaskForm extends React.Component {
                   </FormGroup>
                   <FormGroup>
                     <Label for="taskDate">Task Date</Label>
-                    <Input type="date" name="task" id="date" onChange={this.handleFieldChange}/>
+                  <Input type="date" name="task" id="date" onChange={this.handleFieldChange}/>
+                  </FormGroup>
+                  <FormGroup>
+                    <Label for="taskDay">Day</Label>
+                    <Input type="day" name="task" id="day" onChange={this.handleFieldChange}/>
                   </FormGroup>
                   <FormGroup>
                     <Label for="taskTime">Task Time</Label>

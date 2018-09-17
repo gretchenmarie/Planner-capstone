@@ -1,7 +1,9 @@
 import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from "react"
 //import Nav from './navbar/Nav'
-import Week from './week/Week'
+import WeekForm from './week/WeekForm'
+import WeekList from './week/WeekList'
+import EditWeek from './week/EditWeek'
 import TaskList from './task/TaskList'
 import TaskDetail from "./task/TaskDetail"
 import EditTask from "./task/EditTask"
@@ -28,7 +30,7 @@ export default class ApplicationViews extends Component {
     componentDidMount() {
         const newState = {}
 
-        TaskManager.getAll().then(tasks => newState.tasks = tasks)
+        TaskManager.getAll(this.user().id).then(tasks => newState.tasks = tasks)
             .then(() => WeekManager.getAll().then(week => newState.week = week))
 
             .then(() => MonthManager.getAll().then(month => newState.month = month))
@@ -37,12 +39,12 @@ export default class ApplicationViews extends Component {
 
     }
     addTask = tasks => TaskManager.post(tasks)
-        .then(() => TaskManager.getAll())
+        .then(() => TaskManager.getAll(this.user().id))
         .then(tasks => this.setState({
             tasks: tasks
         }))
     deleteTask = id => TaskManager.delete( id)
-        .then(() => TaskManager.getAll())
+        .then(() => TaskManager.getAll(this.user().id))
         .then(tasks => this.setState({
             tasks: tasks
         }))
@@ -50,6 +52,21 @@ export default class ApplicationViews extends Component {
        .then(() => TaskManager.getAll("tasks", this.user().id))
         .then(tasks => this.setState({
             tasks: tasks
+        }))
+    addWeek = weeks => TaskManager.post(weeks)
+        .then(() => TaskManager.getAll(this.user().id))
+        .then(weeks => this.setState({
+            weeks: weeks
+        }))
+    deleteWeek = id => TaskManager.delete( id)
+        .then(() => TaskManager.getAll(this.user().id))
+        .then(weeks => this.setState({
+            weeks: weeks
+        }))
+    editWeek = (editedWeek, id) => TaskManager.edit(editedWeek,id)
+       .then(() => TaskManager.getAll("weeks", this.user().id))
+        .then(weeks => this.setState({
+            weeks: weeks
         }))
 
 
@@ -72,10 +89,20 @@ export default class ApplicationViews extends Component {
                     }} />
                     <Route exact path="/week" render={props => {
                         if (this.isAuthenticated()) {
-                            return <Week {...props}
+                            return <WeekForm {...props}
                                 editWeek={this.editWeek}
-                                week={this.state.week}
-                                tasks={this.state.Tasks} />
+                                weeks={this.state.week}
+                                tasks={this.state.tasks} />
+                        }else {
+                            return <Redirect to="/login" />
+                        }
+                    }} />
+                    <Route exact path="/week" render={props => {
+                        if (this.isAuthenticated()) {
+                            return <WeekList {...props}
+                                editWeek={this.editWeek}
+                                weeks={this.state.week}
+                                tasks={this.state.tasks} />
                         }else {
                             return <Redirect to="/login" />
                         }
@@ -102,6 +129,12 @@ export default class ApplicationViews extends Component {
                             tasks={this.state.tasks}
                             deleteTask={this.deleteTask}
                             editTask={this.editTask} />
+                    }} />
+                   <Route exact path="/week/edit/:weekId(\d+)" render={(props) => {
+                        return <EditWeek {...props}
+                            week={this.state.weeks}
+                            deleteWeek={this.deleteWeek}
+                            editWeek={this.editWeek} />
                     }} />
 
 

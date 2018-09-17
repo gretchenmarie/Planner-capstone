@@ -6,7 +6,7 @@ MVP:
 
 The planner will have a month at a glance view and a weekly view.
 
-The weekly view will have a to do list that will also show up on the monthly view. All entries can be edited and deleted.
+The weekly view will have link to the to do list that will also show up on the monthly view. All entries can be edited and deleted.
 
 The to do list will list the most immediate tasks first and the current day's tasks a different color.
 

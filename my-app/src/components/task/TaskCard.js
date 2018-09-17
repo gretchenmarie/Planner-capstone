@@ -20,6 +20,9 @@ export default class TaskCard extends Component {
                                  <br />
                                  {this.props.task.detail}
                                  <br />
+                                 {this.props.task.day}
+                                 <br />
+                                 
                                  {this.props.task.date}
                                  <br />
                                  {this.props.task.time}

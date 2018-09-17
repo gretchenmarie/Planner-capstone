@@ -26,13 +26,14 @@ post: {
     }
 },
 edit: {
-    value: function (editAnimal) {
-        return fetch(`${remoteURL}/animals`, {
+    value: function (editWeek,id) {
+        console.log(editWeek,"API")
+        return fetch(`${remoteURL}/week/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(editAnimal)
+            body: JSON.stringify(editWeek)
         }).then(e => e.json())
     }
 }
