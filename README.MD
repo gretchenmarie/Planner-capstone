@@ -1,3 +1,4 @@
+# Planner-capstone
 Front End Capstone: Daily planner
 
 What does the Daily planner do? The Daily planner will allow users to use an app instead of a bulky paper planner to keep track of all of the things you would normally see in a day planner. It will keep basic information about tasks, appointments, vehicle maintenance and an address book all in one place. It will allow the user to create an account and use the tools in the app to organize their month and week.
