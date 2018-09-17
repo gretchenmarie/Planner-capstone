@@ -20,13 +20,14 @@ adding an outside API that populates the monthly calendar with daily weather inf
 
 Components:
 
-monthly calendar where you can mark off days- weekly view with a task list address book
+weekly view
+task list
+monthly calendar
 
 Dependencies:
 
 The task list will have information-the information in state the information from that list will be passed as props to the monthly and weekly views.
+tasks are created and then passed as props to the details and edit function
 
-The address book will have information that is pased as props to the weekly view. As detailed information for appointments.
-
-The vehicle maintenance section will pass information to the monthly view and the weekly view.
+.
 ![picture](images/capstoneplanner.png)

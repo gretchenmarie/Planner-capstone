@@ -7,7 +7,7 @@ MVP:
 
 The planner will have a month at a glance view and a weekly view.
 
-The weekly view will have a to do list that will also show up on the monthly view. All entries can be edited and deleted.
+The weekly view will have link to the to do list that will also show up on the monthly view. All entries can be edited and deleted.
 
 The to do list will list the most immediate tasks first and the current day's tasks a different color.
 
@@ -21,12 +21,14 @@ adding an outside API that populates the monthly calendar with daily weather inf
 
 Components:
 
-monthly calendar where you can mark off days- weekly view with a task list address book
+weekly view
+task list
+monthly calendar
 
 Dependencies:
 
 The task list will have information-the information in state the information from that list will be passed as props to the monthly and weekly views.
+tasks are created and then passed as props to the details and edit function
 
-The address book will have information that is pased as props to the weekly view. As detailed information for appointments.
-
-The vehicle maintenance section will pass information to the monthly view and the weekly view.
+.
+![picture](images/capstoneplanner.png)
