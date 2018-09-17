@@ -6,9 +6,14 @@ export default Object.create(null, {
             return fetch(`${remoteURL}/tasks/${id}`).then(e => e.json())
         }
     },
+    // getAll: {
+    //     value: function () {
+    //         return fetch(`${remoteURL}/tasks`).then(e => e.json())
+    //     }
+    // },
     getAll: {
-        value: function () {
-            return fetch(`${remoteURL}/tasks`).then(e => e.json())
+        value: function (id) {
+            return fetch(`${remoteURL}/tasks?userId=${id}&_sort=date&_order=asc`).then(e => e.json())
         }
     },
 

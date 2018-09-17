@@ -23,36 +23,61 @@
   "week": [
     {
       "name": "Monday",
+      "notes":"hi",
       "date": "2018-09-08",
       "id": 1
     }
   ],
   "tasks": [
     {
-      "name": "route",
-      "date": "2018-09-01",
-      "detail": "Deatils of another task",
+      "name": "another test",
+      "date": "2018-09-16",
+      "time": "11:58",
+      "detail": "Details of another task",
       "status": false,
-      "userId": 2,
-      "id": 4
-    },
-    {
-      "name": "school",
-      "date": "12:59",
-      "time": "",
-      "detail": "capstone",
-      "status": false,
-      "userId": 2,
-      "id": 5
+      "userId": 1,
+      "dayofweek": 6,
+      "id": 15
     },
     {
       "name": "another test",
-      "date": "2018-09-15",
-      "time": "13:00",
-      "detail": " details",
+      "date": "2018-09-17",
+      "time": "12:59",
+      "detail": "Details of another task",
+      "status": false,
+      "userId": 1,
+      "dayofweek": 0,
+      "id": 16
+    },
+    {
+      "name": "urgent",
+      "date": "2018-09-17",
+      "time": "12:59",
+      "detail": "Details of another task",
       "status": false,
       "userId": 2,
-      "id": 6
+      "dayofweek": 0,
+      "id": 17
+    },
+    {
+      "name": "school",
+      "date": "2018-09-21",
+      "time": "12:59",
+      "detail": "Details of another task",
+      "status": false,
+      "userId": 2,
+      "dayofweek": 4,
+      "id": 18
+    },
+    {
+      "name": "another test",
+      "date": "2018-09-16",
+      "time": "12:59",
+      "detail": "Details of another task",
+      "status": false,
+      "userId": 2,
+      "dayofweek": 6,
+      "id": 19
     }
   ]
 }

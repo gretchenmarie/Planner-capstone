@@ -31,7 +31,7 @@ export default class TaskDetail extends Component {
 
                         </h3>
 
-                        <h4 className="card-title">{task.date} {task.time}</h4>
+                        <h4 className="card-title">{task.date} {task.day}{task.time}</h4>
                         <button className="btn">
                         <Link className="nav-link" to={`/tasks/edit/${task.id}`}>Edit</Link>
                           </button>
