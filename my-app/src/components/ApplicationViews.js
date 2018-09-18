@@ -1,7 +1,7 @@
 import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from "react"
 //import Nav from './navbar/Nav'
-import WeekForm from './week/WeekForm'
+import WeekDetail from './week/WeekDetail'
 import WeekList from './week/WeekList'
 import EditWeek from './week/EditWeek'
 import TaskList from './task/TaskList'
@@ -35,7 +35,7 @@ export default class ApplicationViews extends Component {
 
             .then(() => MonthManager.getAll().then(month => newState.month = month))
 
-            .then(() => {this.setState(newState) })
+            .then(() => { this.setState(newState) })
 
     }
     addTask = tasks => TaskManager.post(tasks)
@@ -43,30 +43,30 @@ export default class ApplicationViews extends Component {
         .then(tasks => this.setState({
             tasks: tasks
         }))
-    deleteTask = id => TaskManager.delete( id)
+    deleteTask = id => TaskManager.delete(id)
         .then(() => TaskManager.getAll(this.user().id))
         .then(tasks => this.setState({
             tasks: tasks
         }))
-    editTask = (editedTask, id) => TaskManager.edit(editedTask,id)
-       .then(() => TaskManager.getAll("tasks", this.user().id))
+    editTask = (editedTask, id) => TaskManager.edit(editedTask, id)
+        .then(() => TaskManager.getAll("tasks", this.user().id))
         .then(tasks => this.setState({
             tasks: tasks
         }))
-    addWeek = weeks => TaskManager.post(weeks)
-        .then(() => TaskManager.getAll(this.user().id))
-        .then(weeks => this.setState({
-            weeks: weeks
+    addWeek = week => WeekManager.post(week)
+        .then(() => WeekManager.getAll(this.user().id))
+        .then(week => this.setState({
+            week: week
         }))
-    deleteWeek = id => TaskManager.delete( id)
-        .then(() => TaskManager.getAll(this.user().id))
-        .then(weeks => this.setState({
-            weeks: weeks
+    deleteWeek = id => WeekManager.delete(id)
+        .then(() => WeekManager.getAll(this.user().id))
+        .then(week => this.setState({
+            week: week
         }))
-    editWeek = (editedWeek, id) => TaskManager.edit(editedWeek,id)
-       .then(() => TaskManager.getAll("weeks", this.user().id))
-        .then(weeks => this.setState({
-            weeks: weeks
+    editWeek = (editedWeek, id) => WeekManager.edit(editedWeek, id)
+        .then(() => WeekManager.getAll("weeks", this.user().id))
+        .then(week => this.setState({
+            week: week
         }))
 
 
@@ -76,9 +76,9 @@ export default class ApplicationViews extends Component {
             <div className="stylenavbar">
 
                 <React.Fragment>
-                <Route path="/login" component={Login} />
+                    <Route path="/login" component={Login} />
 
-                <Route exact path="/" render={(props) => {
+                    <Route exact path="/" render={(props) => {
                         if (this.isAuthenticated()) {
                             return <Month {...props}
 
@@ -87,54 +87,62 @@ export default class ApplicationViews extends Component {
                             return <Redirect to="/login" />
                         }
                     }} />
-                    <Route exact path="/week" render={props => {
+
+                    <Route exact path="/month" render={props => {
                         if (this.isAuthenticated()) {
-                            return <WeekForm {...props}
-                                editWeek={this.editWeek}
-                                weeks={this.state.week}
-                                tasks={this.state.tasks} />
-                        }else {
+                            return <Month {...props}
+
+                            />
+                        } else {
                             return <Redirect to="/login" />
                         }
                     }} />
                     <Route exact path="/week" render={props => {
                         if (this.isAuthenticated()) {
                             return <WeekList {...props}
+                                addWeek={this.addWeek}
+                                deleteWeek={this.deleteWeek}
                                 editWeek={this.editWeek}
-                                weeks={this.state.week}
-                                tasks={this.state.tasks} />
-                        }else {
+                                week={this.state.week}
+                            />
+                        } else {
                             return <Redirect to="/login" />
                         }
+                    }} />
+                    <Route exact path="/week/edit/:weekId(\d+)" render={(props) => {
+                        return <EditWeek {...props}
+                            week={this.state.week}
+                            deleteWeek={this.deleteWeek}
+                            editWeek={this.editWeek} />
+                    }} />
+                    <Route exact path="/week/:weekId(\d+)" render={(props) => {
+                        return <WeekDetail {...props}
+                            week={this.state.week}
+                            deleteWeek={this.deleteWeek}
+                            editWeek={this.editWeek} />
                     }} />
                     <Route exact path="/tasks" render={(props) => {
-                       if (this.isAuthenticated()) {
-                        return <TaskList {...props}
-                            addTask={this.addTask}
-                            editTask={this.editTask}
-                            deleteTask={this.deleteTask}
-                            tasks={this.state.tasks} />
-                        }else {
+                        if (this.isAuthenticated()) {
+                            return <TaskList {...props}
+                                addTask={this.addTask}
+                                editTask={this.editTask}
+                                deleteTask={this.deleteTask}
+                                tasks={this.state.tasks} />
+                        } else {
                             return <Redirect to="/login" />
                         }
                     }} />
-                   <Route exact path="/tasks/:taskId(\d+)" render={(props) => {
+                    <Route exact path="/tasks/:taskId(\d+)" render={(props) => {
                         return <TaskDetail {...props}
                             tasks={this.state.tasks}
                             deleteTask={this.deleteTask}
                             editTask={this.editTask} />
                     }} />
-                   <Route exact path="/tasks/edit/:taskId(\d+)" render={(props) => {
+                    <Route exact path="/tasks/edit/:taskId(\d+)" render={(props) => {
                         return <EditTask {...props}
                             tasks={this.state.tasks}
                             deleteTask={this.deleteTask}
                             editTask={this.editTask} />
-                    }} />
-                   <Route exact path="/week/edit/:weekId(\d+)" render={(props) => {
-                        return <EditWeek {...props}
-                            week={this.state.weeks}
-                            deleteWeek={this.deleteWeek}
-                            editWeek={this.editWeek} />
                     }} />
 
 

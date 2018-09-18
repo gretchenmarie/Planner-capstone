@@ -12,16 +12,18 @@ export default class WeekCard extends Component {
             <section className="weeks">
 
 
-                 <div key={this.props.weeks.id} className="card">
+                 <div key={this.props.week.id} className="card">
                               <div className="card-body">
                                  <h5 className="card-title">
 
-                                 {this.props.week.name}
+                                 {this.props.week.day}
+                                 <br />
+                                 {this.props.week.date}
                                  <br />
                                  {this.props.week.notes}
                                  <br />
-
-                                 <Link className="nav-link" to={`/week/${this.props.week.id}`}>See Notes</Link>
+                                 <Link className="nav-link" to={`/tasks`}>View Task List</Link>
+                                 <Link className="nav-link" to={`/week/${this.props.week.id}`}>See Notes for Today</Link>
                                  <button onClick={() => this.props.deleteWeek(this.props.week.id)}
                                     className="button">Delete</button>
                                  </h5>

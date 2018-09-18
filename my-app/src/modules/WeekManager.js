@@ -36,5 +36,14 @@ edit: {
             body: JSON.stringify(editWeek)
         }).then(e => e.json())
     }
-}
+},
+delete: {
+    value: (id) => {
+        return fetch(`${remoteURL}/week/${id}`, {
+        method: "DELETE"
+    })
+   .then(e => e.json())
+
+    }
+},
 })

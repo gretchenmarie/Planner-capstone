@@ -15,8 +15,9 @@ export default class WeekList extends Component {
             <WeekForm {...this.props}/>
             <section>
                     {
-                        this.props.weeks.map(week =>
-                            <WeekCard  key={week.id} task={week}  editWeek={this.props.editWeek} deleteWeek={this.props.deleteWeek} {...this.props} />
+                        this.props.week.map(day =>
+                            <WeekCard  key={day.id} week={day} addWeek={this.props.addWeek} editWeek={this.props.editWeek} deleteWeek={this.props.deleteWeek}  />
+                        
                         )
                     }
                 </section>

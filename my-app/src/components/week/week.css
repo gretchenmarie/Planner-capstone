@@ -1,3 +1,18 @@
-.weekcard{
-    padding: 4em;
+
+.card{
+    background-color: rgb(194, 109, 183);
+    border: 20px bold black;
+    width: 3em;
+    margin: 2em 3em;
+ align-items: center;
+ box-shadow: 5px 10px  #737779;
+ border-radius: 30%;
+}
+.card-body{
+    background-color: rgb(236, 183, 229);
+    width: 3em;
+}
+
+#root{
+    background-color: #e0c6d9
 }
