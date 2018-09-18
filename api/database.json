@@ -22,10 +22,19 @@
   ],
   "week": [
     {
-      "name": "Monday",
-      "notes":"hi",
-      "date": "2018-09-08",
-      "id": 1
+      "day": "Monday",
+      "date": "2018-09-17",
+      "notes": "test",
+      "status": false,
+      "userId": 2,
+      "id": 25
+    },
+    {
+      "day": "Tuesday",
+      "notes": "Doctors Appointment, walk dog, get groceries",
+      "status": false,
+      "userId": 2,
+      "id": 26
     }
   ],
   "tasks": [
@@ -33,6 +42,7 @@
       "name": "another test",
       "date": "2018-09-16",
       "time": "11:58",
+      "day": "Sunday",
       "detail": "Details of another task",
       "status": false,
       "userId": 1,
@@ -50,34 +60,24 @@
       "id": 16
     },
     {
-      "name": "urgent",
-      "date": "2018-09-17",
-      "time": "12:59",
-      "detail": "Details of another task",
+      "name": "Reorder checks",
+      "date": "2018-09-28",
+      "day": "Friday",
+      "time": "08:00",
+      "detail": "contact bank at 555-555-5555",
       "status": false,
       "userId": 2,
-      "dayofweek": 0,
       "id": 17
     },
     {
-      "name": "school",
-      "date": "2018-09-21",
-      "time": "12:59",
-      "detail": "Details of another task",
+      "name": "grocery shopping",
+      "date": "2018-09-19",
+      "day": "Wednesday",
+      "time": "11:58",
+      "detail": "order groceries",
       "status": false,
       "userId": 2,
-      "dayofweek": 4,
       "id": 18
-    },
-    {
-      "name": "another test",
-      "date": "2018-09-16",
-      "time": "12:59",
-      "detail": "Details of another task",
-      "status": false,
-      "userId": 2,
-      "dayofweek": 6,
-      "id": 19
     }
   ]
 }

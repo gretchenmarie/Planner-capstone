@@ -24,7 +24,7 @@ export default class TaskDetail extends Component {
                     <div className="card-body">
                         <h3 className="card-title">
 
-                            {task.name}
+                            {task.day}
                             <br/>
                             {task.detail}
                             <br />
