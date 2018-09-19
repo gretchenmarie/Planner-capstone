@@ -20,30 +20,22 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
-        <Nav tabs>
+        <Nav tabs className="nav">
           <NavItem>
             <NavLink href="/login" active>Login</NavLink>
           </NavItem>
-          {/* <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-            <DropdownToggle nav caret>
-              Dropdown
-            </DropdownToggle>
-            <DropdownMenu>
-              <DropdownItem header>Header</DropdownItem>
-              <DropdownItem disabled>Action</DropdownItem>
-              <DropdownItem>Another Action</DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>Another Action</DropdownItem>
-            </DropdownMenu>
-          </Dropdown> */}
-          <NavItem>
+
+          <NavItem className="tab">
             <NavLink href="/month">Month View</NavLink>
           </NavItem>
-          <NavItem>
+          <NavItem className="tab">
             <NavLink href="/week">Week View</NavLink>
           </NavItem>
-          <NavItem>
+          <NavItem className="tab">
             <NavLink  href="/tasks">Task List</NavLink>
+          </NavItem>
+          <NavItem className="tab">
+            <NavLink  href="/address">Address Book</NavLink>
           </NavItem>
         </Nav>
       </div>

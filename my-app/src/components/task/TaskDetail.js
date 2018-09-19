@@ -23,22 +23,12 @@ export default class TaskDetail extends Component {
                 <div key={task.id} className="card">
                     <div className="card-body">
                         <h3 className="card-title">
-
-                            {task.day}
-                            <br/>
-                            {task.detail}
-                            <br />
-
-                        </h3>
-
-                        <h4 className="card-title">{task.date} {task.day}{task.time}</h4>
+                            {task.detail}</h3>
+                        <h5>{task.date}<br /> {task.time} </h5>
                         <button className="btn">
                         <Link className="nav-link" to={`/tasks/edit/${task.id}`}>Edit</Link>
                           </button>
-                        {/* <button
-                            onClick={() => this.props.editTask(task.id)
-                                .then(() => this.props.history.push("/tasks"))}
-                            className="card-link">Edit</button> */}
+
                     </div>
                 </div>
             </section>

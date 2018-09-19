@@ -20,11 +20,37 @@
       "id": 1
     }
   ],
+  "address": [
+    {
+      "name": "maxwell nutter",
+      "email": "gretchennutter@gmail.com",
+      "address": "2008 WHITE AVE",
+      "phone": "6152024566",
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "name": "Wyatt",
+      "email": "thisemail@email",
+      "address": "2008 WHITE AVE",
+      "phone": "6152024566",
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "name": "gretchen m nutter",
+      "email": "gretchennutter@gmail.com",
+      "address": "2008 WHITE AVE",
+      "phone": "6152024566",
+      "userId": 2,
+      "id": 7
+    }
+  ],
   "week": [
     {
       "day": "Monday",
       "date": "2018-09-17",
-      "notes": "test",
+      "notes": "add things from task list",
       "status": false,
       "userId": 2,
       "id": 25
@@ -35,6 +61,41 @@
       "status": false,
       "userId": 2,
       "id": 26
+    },
+    {
+      "day": "Wednesday",
+      "notes": "see task list",
+      "status": false,
+      "userId": 2,
+      "id": 27
+    },
+    {
+      "day": "Thursday",
+      "notes": "",
+      "status": false,
+      "userId": 2,
+      "id": 28
+    },
+    {
+      "day": "Friday",
+      "notes": "",
+      "status": false,
+      "userId": 2,
+      "id": 29
+    },
+    {
+      "day": "Saturday",
+      "notes": "",
+      "status": false,
+      "userId": 2,
+      "id": 30
+    },
+    {
+      "day": "Sunday",
+      "notes": "",
+      "status": false,
+      "userId": 2,
+      "id": 31
     }
   ],
   "tasks": [
@@ -60,24 +121,24 @@
       "id": 16
     },
     {
-      "name": "Reorder checks",
-      "date": "2018-09-28",
-      "day": "Friday",
-      "time": "08:00",
-      "detail": "contact bank at 555-555-5555",
-      "status": false,
-      "userId": 2,
-      "id": 17
-    },
-    {
-      "name": "grocery shopping",
-      "date": "2018-09-19",
-      "day": "Wednesday",
-      "time": "11:58",
-      "detail": "order groceries",
+      "name": "Capstone",
+      "date": "2018-10-02",
+      "day": "Tuesday",
+      "time": "09:00",
+      "detail": "front end capstone",
       "status": false,
       "userId": 2,
       "id": 18
+    },
+    {
+      "name": "another test",
+      "date": "2018-09-27",
+      "day": "another test",
+      "time": "12:59",
+      "detail": "Details of another task",
+      "status": false,
+      "userId": 2,
+      "id": 19
     }
   ]
 }

@@ -15,8 +15,8 @@ export default class TaskList extends Component {
             <TaskForm {...this.props}/>
             <section>
                     {
-                        this.props.tasks.map(task =>
-                            <TaskCard  key={task.id} task={task}  editTask={this.props.editTask} deleteTask={this.props.deleteTask} {...this.props} />
+                        this.props.tasks.map((task,index) =>
+                            <TaskCard  key={task.id} task={task} index={index} editTask={this.props.editTask} deleteTask={this.props.deleteTask} {...this.props} />
                         )
                     }
                 </section>

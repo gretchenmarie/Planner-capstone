@@ -1,18 +1,69 @@
-
+@import url(https://fonts.googleapis.com/icon?family=Lobster);
 .card{
-    background-color: rgb(194, 109, 183);
+    font-family: 'Lobster', cursive;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5;
+    align-items: center;
+    background-color: rgb(80, 110, 241);
     border: 20px bold black;
-    width: 3em;
+    width: 2cm;
+    height: 2cm;
     margin: 2em 3em;
  align-items: center;
- box-shadow: 5px 10px  #737779;
- border-radius: 30%;
+ box-shadow: 5px 10px  #495563;
+ border-radius:70%;
+ float: left;
 }
-.card-body{
-    background-color: rgb(236, 183, 229);
-    width: 3em;
-}
+div.card-body{
+    background-color: rgb(24, 169, 236);
+    width: 450px;
+    height: 345px;
+    float: left;
 
-#root{
-    background-color: #e0c6d9
 }
+div.card{
+    background-color: rgb(20, 188, 240);
+    width: 450px;
+    height: 345px;
+    float: left;
+}
+.weeks{
+    width:45%;
+}
+#root{
+   background-image: radial-gradient(to top, rgba(255, 255, 255, 0.747), rgba(255, 255, 255, 0.399)),
+    url('https://balancinghome.com/wp-content/uploads/2016/07/Planner-A5-An-Organized-Life-7.jpg');
+
+}
+p
+{
+    font-family: sans-serif, cursive;
+}
+.box {
+    transition: box-shadow .3s;
+    width: 300px;
+    height: 500px;
+    margin: 50px;
+    border-radius:10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    float: left;
+
+  }
+
+  #notes{
+      width: 20cm;
+      height: 4cm;
+  }
+  #day{
+    width: 5cm;
+    height: 2cm;
+  }
+  .nav-link{
+     height: 1cm;
+
+    color: rgb(32, 29, 29);
+     border-color:#4d50f0;
+background-color: #2b0aeb;
+  }

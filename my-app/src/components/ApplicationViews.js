@@ -4,11 +4,15 @@ import React, { Component } from "react"
 import WeekDetail from './week/WeekDetail'
 import WeekList from './week/WeekList'
 import EditWeek from './week/EditWeek'
+import AddressDetail from './address/AddressDetail'
+import AddressList from './address/AddressList'
+import EditAddress from './address/EditAddress'
 import TaskList from './task/TaskList'
 import TaskDetail from "./task/TaskDetail"
 import EditTask from "./task/EditTask"
 import Month from './month/Month'
 
+import AddressManager from '../modules/AddressManager'
 import TaskManager from '../modules/TaskManager'
 import WeekManager from '../modules/WeekManager'
 import MonthManager from '../modules/MonthManager'
@@ -23,6 +27,7 @@ export default class ApplicationViews extends Component {
         month: [],
         week: [],
         tasks: [],
+        address:[],
 
         isLoaded: false,
     }
@@ -34,6 +39,7 @@ export default class ApplicationViews extends Component {
             .then(() => WeekManager.getAll().then(week => newState.week = week))
 
             .then(() => MonthManager.getAll().then(month => newState.month = month))
+            .then(() => AddressManager.getAll().then(address => newState.address = address))
 
             .then(() => { this.setState(newState) })
 
@@ -67,6 +73,21 @@ export default class ApplicationViews extends Component {
         .then(() => WeekManager.getAll("weeks", this.user().id))
         .then(week => this.setState({
             week: week
+        }))
+    addAddress = address => AddressManager.post(address)
+        .then(() => AddressManager.getAll(this.user().id))
+        .then(address => this.setState({
+            address: address
+        }))
+    deleteAddress = id => AddressManager.delete(id)
+        .then(() => AddressManager.getAll(this.user().id))
+        .then(address => this.setState({
+            address: address
+        }))
+    editAddress = (editAddress, id) => AddressManager.edit(editAddress, id)
+        .then(() => AddressManager.getAll("Address", this.user().id))
+        .then(address => this.setState({
+            address: address
         }))
 
 
@@ -143,6 +164,29 @@ export default class ApplicationViews extends Component {
                             tasks={this.state.tasks}
                             deleteTask={this.deleteTask}
                             editTask={this.editTask} />
+                    }} />
+                    <Route exact path="/address" render={(props) => {
+                        if (this.isAuthenticated()) {
+                            return <AddressList {...props}
+                                addAddress={this.addAddress}
+                                editAddress={this.editAddress}
+                                deleteAddress={this.deleteAddress}
+                                address={this.state.address} />
+                        } else {
+                            return <Redirect to="/login" />
+                        }
+                    }} />
+                    <Route exact path="/address/:addressId(\d+)" render={(props) => {
+                        return <AddressDetail {...props}
+                            address={this.state.address}
+                            deleteAddress={this.deleteAddress}
+                            editAddress={this.editAddress} />
+                    }} />
+                    <Route exact path="/address/edit/:addressId(\d+)" render={(props) => {
+                        return <EditAddress {...props}
+                            address={this.state.address}
+                            deleteAddress={this.deleteAddress}
+                            editAddress={this.editAddress} />
                     }} />
 
 

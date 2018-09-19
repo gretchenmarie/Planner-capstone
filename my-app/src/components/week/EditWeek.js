@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import "./Week.css"
+//import "./Week.css"
 
 export default class EditWeek extends Component {
 

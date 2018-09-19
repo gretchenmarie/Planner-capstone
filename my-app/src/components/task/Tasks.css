@@ -1,13 +1,16 @@
 .card-body{
-    height: 10cm;
-    width: 15cm;
+    height: 5cm;
+    width: 10cm;
+    float: left;
 }
 .card{
-    height: 10cm;
-    width: 15cm;
+    height: 5cm;
+    width: 10cm;
+    float: left;
+    margin: .3em;
 }
 .taskcard{
-    margin: 12em;
+    margin: .3em;
 }
 .taskform{
     margin: 8em;
@@ -23,7 +26,7 @@
 
     color: #fff;
     background-color: #d733e6;
-    border-color:#4e28a7;
+
 }
 .edittask{
     margin: 8em;
@@ -31,9 +34,29 @@
 
 .card-title{
     margin: 4em;
+
 }
 .button{
     color: #fff;
-    background-color: #d733e6;
-    border-color:#4e28a7;
+    background-color: #b65cc2;
+    border-color:#eb27ba;
+    box-shadow: 40px;
+}
+.mostrecent{
+    box-shadow: 40px rgb(241, 13, 51);
+}
+#detail{
+    height: 6cm;
+}
+
+
+.list-group-item.active{
+
+    background-color: rgb(194, 109, 183);
+}
+.active{
+    background-color: rgb(20, 188, 240)
+}
+.btn-indigo{
+    margin: 1cm;
 }
