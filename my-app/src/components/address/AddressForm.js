@@ -1,17 +1,17 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input } from 'reactstrap';
-import "./Tasks.css"
+import "./Address.css"
 
-class TaskForm extends React.Component {
+class AddressForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       modal: false,
       name: "",
-      date: "",
-      day: "",
-      time:"",
-      detail:"",
+      email: "",
+      address: "",
+      phone:"",
+
       userId: ""
     };
 
@@ -40,51 +40,46 @@ class TaskForm extends React.Component {
     constructNewTask = evt => {
         evt.preventDefault()
 
-        const newTask = {
+        const newAddress = {
             name: this.state.name,
-            date: this.state.date,
-            day: this.state.day,
-            time: this.state.time,
-            detail: this.state.detail,
-            status: false,
+            email: this.state.email,
+            address: this.state.address,
+            phone: this.state.phone,
             userId: this.user().id,
 
         }
-        this.props.addTask(newTask).then(() => this.toggle())
+        this.props.addAddress(newAddress).then(() => this.toggle())
     }
 
   render() {
     return (
-      <div className="taskform" className="hoverable">
-        <Button color="indigo" onClick={this.toggle}>New Task</Button>
+      <div className="taskform" >
+        <Button color="indigo" onClick={this.toggle}>Add Address</Button>
         <Modal  isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>New Task</ModalHeader>
+          <ModalHeader toggle={this.toggle}>New Contact</ModalHeader>
           <ModalBody>
               <Form>
                   <FormGroup>
-                    <Label for="taskName">Task Name</Label>
-                    <Input type="text" name="task" id="name" placeholder="Task Name" onChange={this.handleFieldChange}/>
+                    <Label for="contact Name">Contact Name</Label>
+                    <Input type="text" name="name" id="name" placeholder="contact Name" onChange={this.handleFieldChange}/>
                   </FormGroup>
                   <FormGroup>
-                    <Label for="taskDetail">Details</Label>
-                    <Input type="text" name="detail" id="detail" placeholder="Detail" onChange={this.handleFieldChange}/>
+                    <Label for="email">email</Label>
+                    <Input type="text" name="email" id="email" placeholder="email" onChange={this.handleFieldChange}/>
                   </FormGroup>
                   <FormGroup>
                   <FormGroup>
-                    <Label for="taskDay">Day</Label>
-                    <Input type="day" name="task" id="day" onChange={this.handleFieldChange}/>
+                    <Label for="address">Address</Label>
+                    <Input type="address" name="address" id="address" onChange={this.handleFieldChange}/>
                   </FormGroup>
-                    <Label for="taskDate">Task Date</Label>
-                  <Input type="date" name="task" id="date" onChange={this.handleFieldChange}/>
+                    <Label for="phone">Phone</Label>
+                  <Input type="phone" name="phone" id="phone" onChange={this.handleFieldChange}/>
                   </FormGroup>
-                  <FormGroup>
-                    <Label for="taskTime">Task Time</Label>
-                    <Input type="time" name="task" id="time" onChange={this.handleFieldChange}/>
-                  </FormGroup>
+
               </Form>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.constructNewTask}>Save Task</Button>{' '}
+            <Button color="primary" onClick={this.constructNewTask}>Save New Contact</Button>{' '}
             <Button color="secondary" onClick={this.toggle}>Cancel</Button>
           </ModalFooter>
         </Modal>
@@ -93,7 +88,4 @@ class TaskForm extends React.Component {
   }
 }
 
-export default TaskForm;
-
-
-
+export default AddressForm;
