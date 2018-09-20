@@ -8,10 +8,6 @@ export default class WeekCard extends Component {
         return (
             <React.Fragment>
 
-
-                <section className="weeks">
-
-
                     <div key={this.props.week.id} className="card">
                         <div className="card-body">
                               <h2> {this.props.week.day}</h2>
@@ -28,7 +24,6 @@ export default class WeekCard extends Component {
                         </div>
                     </div>
 
-                </section>
 
             </React.Fragment>
          )}

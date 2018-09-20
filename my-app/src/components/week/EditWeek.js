@@ -58,6 +58,16 @@ console.log(week,"edit page");
                                />
                     </div>
                     <div className="form-group">
+                        <label htmlFor="Date">Date</label>
+                        <input type="text" required
+                               className="form-control"
+                               onChange={this.handleFieldChange}
+                               id="date"
+                               defaultValue={this.state.date}
+                               placeholder="Date"
+                               />
+                    </div>
+                    <div className="form-group">
                         <label htmlFor="notes">notes</label>
                         <input type="text" required
                                className="form-control"

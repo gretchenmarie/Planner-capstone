@@ -41,6 +41,7 @@ class WeekForm extends React.Component {
     evt.preventDefault()
     const newDate = {
       day: this.state.day,
+      date: this.state.date,
       notes: this.state.notes,
       status: false,
       userId: this.user().id,

@@ -1,32 +1,52 @@
 @import url(https://fonts.googleapis.com/icon?family=Lobster);
+
 .card{
     font-family: 'Lobster', cursive;
     font-size: 1em;
     font-weight: 300;
     line-height: 1.5;
-    align-items: center;
-    background-color: rgb(80, 110, 241);
-    border: 20px bold black;
-    width: 2cm;
-    height: 2cm;
     margin: 2em 3em;
  align-items: center;
  box-shadow: 5px 10px  #495563;
  border-radius:70%;
- float: left;
-}
-div.card-body{
-    background-color: rgb(24, 169, 236);
-    width: 450px;
-    height: 345px;
-    float: left;
+ background: rgb(24, 169, 236);
+        display: flex;
+      flex-direction: row;
+      justify-content:space-around;
+        padding:20px;
+      border:solid;
+        border-radius:40px;
+      align-items:center;
+      flex-wrap:wrap;
 
 }
+div.card-body{
+
+    width: 450px;
+    height: 340px;
+        background: rgb(20, 188, 240);
+        display:flex;
+      flex-direction:row;
+      justify-content:space-around;
+        padding:20px;
+        border-radius:40px;
+      align-items:center;
+      flex-wrap:wrap;
+}
 div.card{
+    margin: 2em;
     background-color: rgb(20, 188, 240);
     width: 450px;
     height: 345px;
-    float: left;
+    display:flex;
+  flex-direction: row;
+  justify-content:space-around;
+    padding:20px;
+  border:solid;
+    border-radius:40px;
+  align-items:center;
+  flex-wrap:wrap;
+
 }
 .weeks{
     width:45%;
@@ -48,12 +68,12 @@ p
     border-radius:10px;
     border: 1px solid #ccc;
     background: #fff;
-    float: left;
+
 
   }
 
   #notes{
-      width: 20cm;
+      width: 12cm;
       height: 4cm;
   }
   #day{
@@ -65,5 +85,5 @@ p
 
     color: rgb(32, 29, 29);
      border-color:#4d50f0;
-background-color: #2b0aeb;
+background-color: #6a73f1;
   }
