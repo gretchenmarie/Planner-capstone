@@ -37,7 +37,7 @@ export default class editAddress extends Component {
         }
 console.log(editAddress,"edit page");
         // Create the article and redirect user to article list
-        this.props.editAddress(editAddress, this.props.match.params.editAddressId).then(() => this.props.history.push("/editAddresss"))
+        this.props.editAddress(editAddress, this.props.match.params.editAddressId).then(() => this.props.history.push("/editaddress"))
 
 
     };

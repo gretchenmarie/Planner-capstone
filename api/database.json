@@ -44,19 +44,28 @@
       "phone": "6152024566",
       "userId": 2,
       "id": 7
+    },
+    {
+      "name": "Doctor Office",
+      "email": "emaildoctor@ doctor.com",
+      "address": "444. this street, nashville, tn",
+      "phone": "555-555-5555",
+      "userId": 2,
+      "id": 8
     }
   ],
   "week": [
     {
       "day": "Monday",
       "date": "2018-09-17",
-      "notes": "add things from task list",
+      "notes": "Groceries, make doctors appointment, call school,kids laundry",
       "status": false,
       "userId": 2,
       "id": 25
     },
     {
       "day": "Tuesday",
+      "date": "2018-09-18",
       "notes": "Doctors Appointment, walk dog, get groceries",
       "status": false,
       "userId": 2,
@@ -64,38 +73,11 @@
     },
     {
       "day": "Wednesday",
-      "notes": "see task list",
+      "date": "2018-09-19",
+      "notes": "Doctors Appointment, walk dog, get groceries",
       "status": false,
       "userId": 2,
       "id": 27
-    },
-    {
-      "day": "Thursday",
-      "notes": "",
-      "status": false,
-      "userId": 2,
-      "id": 28
-    },
-    {
-      "day": "Friday",
-      "notes": "",
-      "status": false,
-      "userId": 2,
-      "id": 29
-    },
-    {
-      "day": "Saturday",
-      "notes": "",
-      "status": false,
-      "userId": 2,
-      "id": 30
-    },
-    {
-      "day": "Sunday",
-      "notes": "",
-      "status": false,
-      "userId": 2,
-      "id": 31
     }
   ],
   "tasks": [
@@ -139,6 +121,16 @@
       "status": false,
       "userId": 2,
       "id": 19
+    },
+    {
+      "name": "doctors appt",
+      "date": "2018-09-26",
+      "day": "Wednesday",
+      "time": "12:59",
+      "detail": "Doctor office, Nashville,Tn, 555-555-5555",
+      "status": false,
+      "userId": 2,
+      "id": 20
     }
   ]
 }
