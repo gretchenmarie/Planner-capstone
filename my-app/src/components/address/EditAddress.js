@@ -21,10 +21,7 @@ export default class editAddress extends Component {
     }
 
 
-    /*
-    Local method for validation, creating animal object, and
-    invoking the function reference passed from parent component
-    */
+
    editAddress = evt => {
        evt.preventDefault()
 
@@ -36,7 +33,7 @@ export default class editAddress extends Component {
 
         }
 console.log(editAddress,"edit page");
-        // Create the article and redirect user to article list
+      
         this.props.editAddress(editAddress, this.props.match.params.editAddressId).then(() => this.props.history.push("/editaddress"))
 
 

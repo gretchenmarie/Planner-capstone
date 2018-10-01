@@ -1,6 +1,24 @@
 # Planner-capstone
 Front End Capstone: Daily planner
 
+<h2>Tools and Tech Used</h2>
+ HTML
+ Javascript
+ React
+ JSON Server
+ React-Bootstrap
+
+ <h2>Testing Locally</h2>
+If you would like to test locally:
+
+git clone this repo
+npm or yarn install to pull in all dependencies
+Install json-server globally: npm i -g json-server
+Make a copy of Database/db.backup.json and run json-server -p 5002 -w *your copy of db.backup.json*
+npm start in root directory to start react server
+
+
+
 What does the Daily planner do? The Daily planner will allow users to use an app instead of a bulky paper planner to keep track of all of the things you would normally see in a day planner. It will keep basic information about tasks, appointments, vehicle maintenance and an address book all in one place. It will allow the user to create an account and use the tools in the app to organize their month and week.
 
 MVP:

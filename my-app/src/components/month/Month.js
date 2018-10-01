@@ -2,7 +2,7 @@
 import React from "react";
 import dateFns from "date-fns";
 import "./Month.css"
-
+import { Link } from "react-router-dom"
 export default class Month extends React.Component {
   state = {
     currentMonth: new Date(),
@@ -10,6 +10,7 @@ export default class Month extends React.Component {
   };
 
   renderHeader() {
+
     const dateFormat = "MMMM YYYY";
 
     return (
@@ -27,6 +28,7 @@ export default class Month extends React.Component {
         </div>
       </div>
     );
+
   }
 
   renderDays() {
@@ -75,8 +77,10 @@ export default class Month extends React.Component {
             onClick={() => this.onDateClick(dateFns.parse(cloneDay))}
           >
             <span className="number">{formattedDate}</span>
+
             <span className="bg">{formattedDate}</span>
           </div>
+
         );
         day = dateFns.addDays(day, 1);
       }
@@ -93,6 +97,7 @@ export default class Month extends React.Component {
   onDateClick = day => {
     this.setState({
       selectedDate: day
+      
     });
   };
 
@@ -109,6 +114,7 @@ export default class Month extends React.Component {
   };
 
   render() {
+
     return (
       <div className="calendar">
         {this.renderHeader()}
