@@ -25,7 +25,7 @@ export default class EditTask extends Component {
     Local method for validation, creating animal object, and
     invoking the function reference passed from parent component
     */
-   EditTask = evt => {
+   editTask = evt => {
        evt.preventDefault()
 
        const task = {
@@ -93,7 +93,7 @@ console.log(task,"edit page");
                     </div>
                              <br />
 
-                  
+
 
                     <div className="form-group">
                         <label htmlFor="time">Time</label>
@@ -106,9 +106,10 @@ console.log(task,"edit page");
                     </div>
 
 
-                    <button type="submit"  className="btn" id="submit-edit" onClick={this.EditTask}>Submit</button>
+                    <button type="submit"  className="btn" id="submit-edit" onClick={this.editTask}>Submit</button>
                     </form>
                     </React.Fragment>
         )
     }
 }
+

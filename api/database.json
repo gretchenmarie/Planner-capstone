@@ -11,6 +11,12 @@
       "username": "gnutter01",
       "password": "nnnn",
       "id": 2
+    },
+    {
+      "email": "grthtnej2com",
+      "username": "gnutter",
+      "password": "nnnn",
+      "id": 3
     }
   ],
   "month": [
@@ -57,51 +63,54 @@
   "week": [
     {
       "day": "Monday",
-      "date": "2018-09-17",
-      "notes": "Groceries, make doctors appointment, call school,kids laundry",
+      "date": "2018-10-01",
+      "notes": "",
       "status": false,
-      "userId": 2,
-      "id": 25
+      "userId": 3,
+      "id": 1
     },
     {
       "day": "Tuesday",
-      "date": "2018-09-18",
-      "notes": "Doctors Appointment, walk dog, get groceries",
+      "date": "2018-10-02",
+      "notes": "",
       "status": false,
-      "userId": 2,
-      "id": 26
+      "userId": 3,
+      "id": 2
     },
     {
       "day": "Wednesday",
-      "date": "2018-09-19",
-      "notes": "Doctors Appointment, walk dog, get groceries",
+      "date": "2018-10-03",
+      "notes": "",
       "status": false,
-      "userId": 2,
-      "id": 27
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "day": "Thursday",
+      "date": "2018-10-04",
+      "notes": "",
+      "status": false,
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "day": "Friday",
+      "date": "2018-10-05",
+      "notes": "",
+      "status": false,
+      "userId": 3,
+      "id": 5
+    },
+    {
+      "day": "Saturday",
+      "date": "2018-10-06",
+      "notes": "",
+      "status": false,
+      "userId": 3,
+      "id": 6
     }
   ],
   "tasks": [
-    {
-      "name": "another test",
-      "date": "2018-09-16",
-      "time": "11:58",
-      "day": "Sunday",
-      "detail": "Details of another task",
-      "status": false,
-      "userId": 1,
-      "dayofweek": 6,
-      "id": 15
-    },
-    {
-      "name": "another test",
-      "date": "2018-09-17",
-      "time": "12:59",
-      "detail": "Details of another task",
-      "status": false,
-      "userId": 1,
-      "dayofweek": 0,
-      "id": 16
-    },
     {
       "name": "Capstone",
       "date": "2018-10-02",
@@ -131,6 +140,26 @@
       "status": false,
       "userId": 2,
       "id": 20
+    },
+    {
+      "name": "etask",
+      "date": "2018-09-22",
+      "day": "saturday test",
+      "time": "12:59",
+      "detail": "Details of another task",
+      "status": false,
+      "userId": 3,
+      "id": 21
+    },
+    {
+      "name": "another test",
+      "date": "2018-10-27",
+      "day": "saturday test",
+      "time": "01:00",
+      "detail": "order groceries",
+      "status": false,
+      "userId": 3,
+      "id": 22
     }
   ]
 }

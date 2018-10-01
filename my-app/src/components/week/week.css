@@ -72,6 +72,10 @@ p
 
   }
 
+  #date{
+      width: 12cm;
+      height: 2cm;
+  }
   #notes{
       width: 12cm;
       height: 4cm;
