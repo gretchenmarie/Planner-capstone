@@ -2,6 +2,7 @@
 Front End Capstone: Daily planner
 
 <h2>Tools and Tech Used</h2>
+
  HTML,
  
  Javascript,
@@ -15,10 +16,14 @@ Front End Capstone: Daily planner
  <h2>Testing Locally</h2>
 If you would like to test locally:
 
-git clone this repo
-npm or yarn install to pull in all dependencies
-Install json-server globally: npm i -g json-server
-Make a copy of Database/db.backup.json and run json-server -p 5002 -w *your copy of db.backup.json*
+git clone this repo,
+
+npm or yarn install to pull in all dependencies,
+
+Install json-server globally: npm i -g json-server,
+
+Make a copy of Database/db.backup.json and run json-server -p 5002 -w *your copy of db.backup.json*,
+
 npm start in root directory to start react server
 
 
