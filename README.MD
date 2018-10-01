@@ -2,10 +2,14 @@
 Front End Capstone: Daily planner
 
 <h2>Tools and Tech Used</h2>
- HTML
- Javascript
- React
- JSON Server
+ HTML,
+ 
+ Javascript,
+ 
+ React,
+ 
+ JSON Server,
+ 
  React-Bootstrap
 
  <h2>Testing Locally</h2>
