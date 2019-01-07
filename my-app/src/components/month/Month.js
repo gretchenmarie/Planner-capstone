@@ -21,7 +21,7 @@ export default class Month extends React.Component {
           </div>
         </div>
         <div className="col col-center">
-          <span>{dateFns.format(this.state.currentMonth, dateFormat)}</span>
+          <span>{dateFns.format(this.state.currentMonth, dateFormat)} </span>
         </div>
         <div className="col col-end" onClick={this.nextMonth}>
           <div className="icon"></div>
@@ -92,12 +92,14 @@ export default class Month extends React.Component {
       days = [];
     }
     return <div className="body">{rows}</div>;
+
   }
+  
 
   onDateClick = day => {
     this.setState({
       selectedDate: day
-      
+
     });
   };
 
@@ -120,6 +122,7 @@ export default class Month extends React.Component {
         {this.renderHeader()}
         {this.renderDays()}
         {this.renderCells()}
+
       </div>
     );
   }

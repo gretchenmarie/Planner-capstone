@@ -21,7 +21,7 @@ import Login from './login/Login'
 
 export default class ApplicationViews extends Component {
     isAuthenticated = () => sessionStorage.getItem("credentials") !== null
-    user = () => JSON.parse(sessionStorage.getItem("credentials"))
+    user = () => JSON.parse(sessionStorage.getItem("credentials")) || {id:0}
     state = {
 
         month: [],
