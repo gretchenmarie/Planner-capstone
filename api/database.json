@@ -17,6 +17,12 @@
       "username": "gnutter",
       "password": "nnnn",
       "id": 3
+    },
+    {
+      "email": "gretchennutter@gmail.net",
+      "username": "gward",
+      "password": "tttt",
+      "id": 4
     }
   ],
   "month": [
@@ -34,14 +40,6 @@
       "phone": "6152024566",
       "userId": 2,
       "id": 5
-    },
-    {
-      "name": "Wyatt",
-      "email": "thisemail@email",
-      "address": "2008 WHITE AVE",
-      "phone": "6152024566",
-      "userId": 2,
-      "id": 6
     },
     {
       "name": "gretchen m nutter",
@@ -64,7 +62,7 @@
     {
       "day": "Monday",
       "date": "2018-10-01",
-      "notes": "",
+      "notes": "Doctors Appointment, walk dog, get groceries,schedule appointments Over view of bills",
       "status": false,
       "userId": 3,
       "id": 1
@@ -72,7 +70,7 @@
     {
       "day": "Tuesday",
       "date": "2018-10-02",
-      "notes": "",
+      "notes": "capstone",
       "status": false,
       "userId": 3,
       "id": 2
@@ -108,6 +106,14 @@
       "status": false,
       "userId": 3,
       "id": 6
+    },
+    {
+      "day": "Sunday",
+      "date": "2018-10-07",
+      "notes": "add things from task list",
+      "status": false,
+      "userId": 2,
+      "id": 7
     }
   ],
   "tasks": [
@@ -160,6 +166,16 @@
       "status": false,
       "userId": 3,
       "id": 22
+    },
+    {
+      "name": "another test",
+      "date": "2018-10-25",
+      "day": "thurday",
+      "time": "12:59",
+      "detail": "Deatils of another task",
+      "status": false,
+      "userId": 2,
+      "id": 23
     }
   ]
 }
