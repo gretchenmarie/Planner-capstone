@@ -37,7 +37,7 @@ export default class Login extends Component {
 
         //Check if the values are already used in database
         LoginManager.getAll().then((result) => {
-            let userObject = result.find(item => {
+            const userObject = result.find(item => {
                 return existingUser.username === item.username && existingUser.email === item.email && existingUser.password === item.password
             })
             if (!userObject) {
@@ -83,7 +83,7 @@ export default class Login extends Component {
         }
         //Check if the values are already used in database
         LoginManager.getAll().then((result) => {
-            let userName = result.find(item => {
+            const userName = result.find(item => {
                 return newUser.username === item.username
             })
             let userEmail = result.find(item => {

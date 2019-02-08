@@ -7,6 +7,7 @@ export default class EditWeek extends Component {
     // Set initial state
     state = {
         day: "",
+        date:"",
         notes: "",
 
     }
@@ -28,6 +29,7 @@ export default class EditWeek extends Component {
 
        const week = {
            day: this.state.day,
+           date: this.state.date,
            notes: this.state.notes
 
         }
