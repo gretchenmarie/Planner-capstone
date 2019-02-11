@@ -8,6 +8,7 @@ export default class TaskCard extends Component {
         let mystyle = ""
         if (this.props.index === 0) {
             mystyle = "mostrecent"
+           
         }
 
         return (
@@ -16,8 +17,8 @@ export default class TaskCard extends Component {
           <ListGroupItemHeading> {this.props.task.name}, {this.props.task.date}</ListGroupItemHeading>
           <ListGroupItemText>
           {this.props.task.detail}
-          <Link className="nav-link" to={`/tasks/${this.props.task.id}`}>Details</Link>
-          {this.props.task.date} <button onClick={() => this.props.deleteTask(this.props.task.id)}
+          <Link  className="nav-link" to={`/tasks/${this.props.task.id}`}>Details</Link>
+           <button onClick={() => this.props.deleteTask(this.props.task.id)}
                                     className="button">Delete</button>
           </ListGroupItemText>
         </ListGroupItem>

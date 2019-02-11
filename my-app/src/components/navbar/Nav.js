@@ -26,16 +26,16 @@ export default class Example extends React.Component {
           </NavItem>
 
           <NavItem className="tab">
-            <NavLink href="/month">Month View</NavLink>
+            <NavLink href="/month">Month</NavLink>
           </NavItem>
           <NavItem className="tab">
-            <NavLink href="/week">Week View</NavLink>
+            <NavLink href="/week">Week</NavLink>
           </NavItem>
           <NavItem className="tab">
-            <NavLink  href="/tasks">Task List</NavLink>
+            <NavLink  href="/tasks">Task</NavLink>
           </NavItem>
           <NavItem className="tab">
-            <NavLink  href="/address">Address Book</NavLink>
+            <NavLink  href="/address">Address</NavLink>
           </NavItem>
         </Nav>
       </div>
