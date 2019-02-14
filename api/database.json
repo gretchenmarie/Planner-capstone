@@ -60,22 +60,6 @@
   ],
   "week": [
     {
-      "day": "Monday",
-      "date": "2019-11-02",
-      "notes": "Doctors Appointment, walk dog, get groceries,schedule appointments Over view of bills",
-      "status": false,
-      "userId": 3,
-      "id": 1
-    },
-    {
-      "day": "Tuesday",
-      "date": "2018-10-02",
-      "notes": "capstone",
-      "status": false,
-      "userId": 3,
-      "id": 2
-    },
-    {
       "day": "Wednesday",
       "date": "2018-10-03",
       "notes": "",
@@ -129,7 +113,7 @@
     },
     {
       "name": "another test",
-      "date": "2018-09-27",
+      "date": "2019-02-21",
       "day": "another test",
       "time": "12:59",
       "detail": "Details of another task",
@@ -138,8 +122,8 @@
       "id": 19
     },
     {
-      "name": "doctors appt2",
-      "date": "2018-09-26",
+      "name": "doctors appt",
+      "date": "2019-02-21",
       "day": "Wednesday",
       "time": "12:59",
       "detail": "Doctor office, Nashville,Tn, 555-555-5555",
@@ -166,16 +150,6 @@
       "status": false,
       "userId": 3,
       "id": 22
-    },
-    {
-      "name": "another test",
-      "date": "2018-10-25",
-      "day": "thurday",
-      "time": "12:59",
-      "detail": "Deatils of another task",
-      "status": false,
-      "userId": 2,
-      "id": 23
     },
     {
       "name": "groceries",

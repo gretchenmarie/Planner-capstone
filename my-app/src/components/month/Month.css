@@ -48,7 +48,11 @@ body {
     url('https://balancinghome.com/wp-content/uploads/2016/07/Planner-A5-An-Organized-Life-7.jpg');
     position: relative;
 }
-
+.nav-link-task{
+  border: black;
+    box-shadow: 1cm, 1cm,1cm;
+    width: 2cm;
+}
 header {
   display: block;
   width: 100%;

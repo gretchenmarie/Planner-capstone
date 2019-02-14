@@ -22,6 +22,7 @@ export default class Month extends React.Component {
         </div>
         <div className="col col-center">
           <span>{dateFns.format(this.state.currentMonth, dateFormat)} </span>
+
         </div>
         <div className="col col-end" onClick={this.nextMonth}>
           <div className="icon"></div>
@@ -73,12 +74,17 @@ export default class Month extends React.Component {
                 ? "disabled"
                 : dateFns.isSameDay(day, selectedDate) ? "selected" : ""
             }`}
+
             key={day}
+
             onClick={() => this.onDateClick(dateFns.parse(cloneDay))}
+
           >
+
             <span className="number">{formattedDate}</span>
 
             <span className="bg">{formattedDate}</span>
+
           </div>
 
         );
@@ -87,6 +93,7 @@ export default class Month extends React.Component {
       rows.push(
         <div className="row" key={day}>
           {days}
+          <Link className="nav-link" to={`/week`}>This Week</Link>
         </div>
       );
       days = [];
@@ -94,7 +101,7 @@ export default class Month extends React.Component {
     return <div className="body">{rows}</div>;
 
   }
-  
+
 
   onDateClick = day => {
     this.setState({
