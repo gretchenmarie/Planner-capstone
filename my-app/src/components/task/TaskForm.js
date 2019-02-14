@@ -56,7 +56,7 @@ class TaskForm extends React.Component {
   render() {
     return (
       <div className="taskform" className="hoverable">
-        <Button color="indigo" onClick={this.toggle}>New Task</Button>
+        <Button className="button" onClick={this.toggle}>New Task</Button>
         <Modal  isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>New Task</ModalHeader>
           <ModalBody>

@@ -5,7 +5,7 @@
 }
 .card{
     height: 5cm;
-    width: 10cm;
+    width: 5cm;
     float: left;
     margin: .3em;
 }
@@ -13,7 +13,7 @@
     margin: .3em;
 }
 .taskform{
-    margin: 8em;
+    margin: 2em;
 }
 .tasks{
     margin: 12 em;
@@ -59,4 +59,10 @@
 }
 .btn-indigo{
     margin: 1cm;
+}
+.nav-link{
+    border: black;
+    box-shadow: 1cm, 1cm,1cm;
+    width: 2cm;
+
 }

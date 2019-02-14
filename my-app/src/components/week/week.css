@@ -85,9 +85,8 @@ p
     height: 2cm;
   }
   .nav-link{
-     height: 1cm;
-
-    color: rgb(32, 29, 29);
-     border-color:#4d50f0;
-background-color: #6a73f1;
+    border: black;
+    box-shadow: 1cm, 1cm,1cm;
+    width: 2cm;
+    float: left;
   }

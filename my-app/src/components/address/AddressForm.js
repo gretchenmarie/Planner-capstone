@@ -54,7 +54,7 @@ class AddressForm extends React.Component {
   render() {
     return (
       <div className="taskform" >
-        <Button color="indigo" onClick={this.toggle}>Add Address</Button>
+        <Button className="button" onClick={this.toggle}>Add Address</Button>
         <Modal  isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>New Contact</ModalHeader>
           <ModalBody>
