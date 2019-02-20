@@ -102,16 +102,6 @@
   ],
   "tasks": [
     {
-      "name": "Capstone",
-      "date": "2018-10-02",
-      "day": "Tuesday",
-      "time": "09:00",
-      "detail": "front end capstone",
-      "status": false,
-      "userId": 2,
-      "id": 18
-    },
-    {
       "name": "another test",
       "date": "2019-02-21",
       "day": "another test",

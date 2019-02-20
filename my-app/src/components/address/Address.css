@@ -14,3 +14,9 @@
     width: 12cm;
     height: 1cm;
 }
+.btn{
+    color: #fff;
+    background-color: #b65cc2;
+    border-color:#eb27ba;
+    box-shadow: 40px;
+}

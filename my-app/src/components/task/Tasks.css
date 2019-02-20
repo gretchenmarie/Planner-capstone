@@ -61,8 +61,10 @@
     margin: 1cm;
 }
 .nav-link{
-    border: black;
-    box-shadow: 1cm, 1cm,1cm;
-    width: 2cm;
-
+    color: #fff;
+    background-color: #b65cc2;
+    border-color:#eb27ba;
+    box-shadow: 40px;
+    float: left;
+    padding: 1em;
 }
