@@ -53,7 +53,7 @@ class WeekForm extends React.Component {
   render() {
     return (
       <div className="weekform">
-        <Button color="indigo" onClick={this.toggle}>Create Your Day</Button>
+        <Button  color="indigo" onClick={this.toggle}>New Day</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Today</ModalHeader>
           <ModalBody>
